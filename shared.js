@@ -1,21 +1,34 @@
-function showModal() {
-  const modal = document.querySelector('.modal');
-  const backdrop = document.querySelector('.backdrop');
+const planButtons = document.querySelectorAll('.plan button');
+const negativeModalButton = document.querySelector('.modal__action--negative');
+const toggleButton = document.querySelector('.toggle-button');
+const backdrop = document.querySelector('.backdrop');
+const modal = document.querySelector('.modal');
+const mobileNav = document.querySelector('.mobile-nav');
 
+function showModal() {
   modal.style.display = 'block';
   backdrop.style.display = 'block';
 }
 
 function hideModal() {
-  const modal = document.querySelector('.modal');
-  const backdrop = document.querySelector('.backdrop');
-
   modal.style.display = 'none';
   backdrop.style.display = 'none';
 }
 
-const planButtons = document.querySelectorAll('.plan button');
-const negativeModalButton = document.querySelector('.modal__action--negative');
+function showSidebar() {
+  backdrop.style.display = 'block';
+  mobileNav.style.display = 'block';
+}
+
+function hideSidebar() {
+  mobileNav.style.display = 'none';
+  backdrop.style.display = 'none';
+}
+
+if (negativeModalButton) {
+  negativeModalButton.addEventListener('click', hideModal);
+}
 
 planButtons.forEach((e) => e.addEventListener('click', showModal));
-negativeModalButton.addEventListener('click', hideModal);
+toggleButton.addEventListener('click', showSidebar);
+backdrop.addEventListener('click', hideSidebar);
