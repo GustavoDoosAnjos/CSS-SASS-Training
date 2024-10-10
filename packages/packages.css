@@ -89,3 +89,25 @@ main {
   padding: 1rem;
   font-size: 1.3rem;
 }
+
+@media (min-width: 40rem) {
+  .main {
+    margin: 3rem auto;
+    max-width: 1500px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .package {
+    border-left: 4px solid #0e451f;
+  }
+
+  #free {
+    border-right: 4px solid #0e451f;
+  }
+
+  #free:hover,
+  #free:active {
+    border-right-color: #0e451f;
+  }
+}
