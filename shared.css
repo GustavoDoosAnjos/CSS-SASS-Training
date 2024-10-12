@@ -8,6 +8,11 @@ body {
   overflow-x: hidden;
 }
 
+main {
+  min-height: calc(100vh - 3.5rem - 8rem);
+  margin-top: 3.5rem;
+}
+
 .backdrop {
   position: fixed;
   display: none;
@@ -26,7 +31,7 @@ body {
   left: 0;
   background: #2ddf5c;
   padding: 0.5rem 1rem;
-  z-index: 1;
+  z-index: 2;
 }
 
 .main-header > div {
