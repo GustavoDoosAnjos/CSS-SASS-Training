@@ -64,6 +64,13 @@ main {
   border: #0e4f1f;
 }
 
+.input-group input.invalid,
+.input-group select.invalid,
+.input-group :invalid {
+  border-color: red !important;
+  background-color: #faacac;
+}
+
 .signup-form button[type='submit'] {
   display: block;
   margin-top: 1rem;
