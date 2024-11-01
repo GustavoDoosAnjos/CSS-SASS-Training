@@ -156,7 +156,9 @@ main {
 }
 
 .mobile-nav {
-  display: none;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 300ms ease-out;
   position: fixed;
   z-index: 101;
   top: 0;
